@@ -11,15 +11,11 @@ export async function getStaticProps() {
       posts,
     },
 
-    revalidate: 0.5, 
+    revalidate: 1, 
   }
 }
 
 export default function Home({posts}) {
-
-  useEffect(() => {
-   console.log(posts);
-  }, [])
 
   return (
     <div className={styles.container}>
